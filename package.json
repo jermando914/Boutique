@@ -1,7 +1,11 @@
 {
   "name": "boutique-vente",
   "version": "0.1.0",
+<<<<<<< HEAD
   "homepage": "https://jermando914.github.io/Boutique",
+=======
+  "homepage": "https://jermando914.github.io/Boutique/",
+>>>>>>> 38e3bcb (Premiere modifier)
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",

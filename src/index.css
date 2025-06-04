@@ -14,3 +14,71 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.navbar {
+  display: flex;
+  justify-self: space-between;
+  align-items: center;
+  background-color: cadetblue;
+  padding: 10px;
+}
+.menu-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  cursor: pointer;
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: white;
+}
+.nav-links{
+  display: flex;
+  margin: 5px;
+  list-style: none;
+  gap: 10px;
+  transition: 2s ease;
+}
+.nav-links:hover{
+  scale: 1;
+  cursor: pointer;
+  color: black  ;
+}
+.nav-links.active{
+  
+  flex-direction: column;
+  background-color: brown;
+  position: absolute;
+  top: 50px;
+  right: -4px;
+  width: 160px;
+  height: 160px;
+  padding: 50px;
+}
+.menu-btn{
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+}
+
+@media (max-width: 768px){
+  .menu-btn{
+    display: block;
+  }
+  .nav-links{
+    display:none;
+    flex-direction: column;
+    background-color: rgb(253, 229, 11);
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 200%;
+    padding: 10px;
+  }
+  .nav-links.active{
+    display: block;
+  }
+}

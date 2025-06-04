@@ -1,30 +1,21 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 
-export default class NavBar extends Component {
-  render() {
-    return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-ligth">
-        <div className="container">
-            <a href="#" className="navbar-brand">Ma Boutique</a>
-            <button className='navbar-toggler' type='button' data-bs-toggle="collapse" data-bs-target="#navbarNav" >
-                <span className='navbar-toggler-icon'></span>
+function NavBar () {
+  const [menuOpen, setMenuOpen] = useState(false)
+  return(
+     <nav className='navbar'>
+         <Link to='/accueil' className='navbar-brand'>MA BOUTIQUE</Link>
+            <button className='menu-btn' onClick={()=>setMenuOpen(!menuOpen)}>
+             =
             </button>
-            <div className="collapse navbar-collapse" id='navbarNav'>
-                <ul className="navbar-nav ms-auto">
-                    <li className="nav-item">
-                        <a href="#" className='nav-link active'> Accueil</a>
-                    </li>
-                    <li className="nav-item">
-                        <a href="#" className='nav-link'> Produits</a>
-                    </li>
-                    <li className="nav-item">
-                        <a href="#" className='nav-link'> Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-      </nav>
-    )
-  }
-}
+         <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
+              <li><Link to="/accueil">Accueil</Link></li>
+              <li><Link to="/produits">Produits</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+         </ul>
+     </nav>
+  );
+};
+export default NavBar

@@ -22,7 +22,7 @@ function Accueil() {
             </div>
 
         </div>
-            <footer className='bg-warning text-white text-center' style={{paddingTop: '10%', paddingBottom: '4%', width: '99.9%'}}>
+            <footer className='bg-warning text-white text-center footer' style={{paddingTop: '10%', paddingBottom: '4%', width: '99.9%'}}>
                <p>Suivez-nous</p>
                   <div className='d-flex justify-content-center gap-4'>
                 <Link href="#" className="text-white mx-2">

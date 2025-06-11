@@ -1,21 +1,32 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
 
 
 function NavBar () {
-  const [menuOpen, setMenuOpen] = useState(false)
+
   return(
-     <nav className='navbar'>
-         <Link to='/accueil' className='navbar-brand text-center'>MA BOUTIQUE</Link>
-            <button className='menu-btn' onClick={()=>setMenuOpen(!menuOpen)}>
-             =
-            </button>
-         <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
-              <li><Link to="/accueil" onClick={()=> setMenuOpen(false)}>Accueil</Link></li>
-              <li><Link to="/produits" onClick={()=> setMenuOpen(false)}>Produits</Link></li>
-              <li><Link to="/contact" onClick={()=> setMenuOpen(false)}>Contact</Link></li>
-         </ul>
-     </nav>
+   
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid bg-warning">
+         <Link class="navbar-brand" to="/">MA BOUTIQUE</Link>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav nav justify-content-end">
+            <li class="nav-item">
+               <Link to="/" class="nav-link active" aria-current="page">Accueill</Link >
+            </li>
+            <li class="nav-item">
+               <Link to="/produits" class="nav-link">Vétement autre</Link >
+            </li>
+            <li class="nav-item">
+               <Link to="/contact"  class="nav-link">Contact</Link >
+            </li>
+            </ul>
+         </div>
+      </div>
+      </nav>
   );
 };
 export default NavBar

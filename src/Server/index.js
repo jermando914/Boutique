@@ -1,18 +1,19 @@
 const express = require('express');
 const cors = require('cors');
 const db = require('./db');
-const achatRouter = require('../achats');
+
 
 
 const app = express();
 app.use(cors({origin: 'http://localhost:3000'}));
 app.use(express.json());
-app.use('/', achatRouter);
 
-app.get('/produits', (req, res) => {
-    db.query('SELECT * FROM produits', (err,result) => {
+app.post('/achats', (req, res) => {
+    const {description, prix, image} = req.body;
+    const sql = 'INSERT INTO achats (description,prix,image) VALUES (? , ?, ?)';
+    db.query(sql, [description,prix,image], (err,result) => {
         if(err) return res.status(500).send(err);
-        res.json(result);
+        res.status(201).json({message: 'Achat bien enregistrer avec image'});
     });
 });
 

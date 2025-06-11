@@ -1,5 +1,6 @@
 {
   "name": "boutique-vente",
+  "homepage": "https://github.com/jermando914/Boutique.git",
   "version": "0.1.0",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

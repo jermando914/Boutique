@@ -2,6 +2,11 @@
   "name": "boutique-vente",
   "version": "0.1.0",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@mui/material": "file:emotion/react@rmotion/styled",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
@@ -9,10 +14,13 @@
     "bootstrap": "^5.3.6",
     "bootstrap-icons": "^1.13.1",
     "boutique-vente": "file:",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mysql": "^2.18.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.1",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -46,5 +54,10 @@
     "gh-pages": "^6.3.0",
     "postcss": "^8.5.4",
     "tailwindcss": "^4.1.8"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
